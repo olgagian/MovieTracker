@@ -9,15 +9,14 @@
 import SwiftUI
 
 struct MovieDetail: View {
-    @State var title:String = ""
-    @State var rating = 3.0
-    @State var seen = false
+    @State var movie: Movie
+    @Environment(\.isPresented) var isPresented
     var body: some View {
         List {
             Section {
                 VStack(alignment: .leading){
                     ControlTitle(title: "title")
-                    TextField("",text: $title)
+                    TextField("",text: $movie.title)
                 }
             }
             Section {
@@ -25,22 +24,22 @@ struct MovieDetail: View {
                     ControlTitle(title:"Rating")
                     HStack {
                         Spacer()
-                        Text(String(repeating: "⭐", count: Int(rating)))
+                        Text(String(repeating: "⭐", count: Int(movie.rating)))
                             .font(.title)
                         Spacer()
                     }
-                    Slider(value:$rating,from:1.0,through: 5.0,by:1.0)
+                    Slider(value:$movie.rating,from:1.0,through: 5.0,by:1.0)
                     
                 }
             }
             Section {
                 VStack(alignment: .leading){
                     ControlTitle(title: "Watched")
-                    Toggle(isOn: $seen){
-                        if title == "" {
+                    Toggle(isOn: $movie.seen){
+                        if movie.title == "" {
                         Text("I have seend this movie")
                         }else {
-                            Text("I have seen\(title)")
+                            Text("I have seen \(movie.title)")
 
                         }
                     }
@@ -49,7 +48,10 @@ struct MovieDetail: View {
             Section {
                 HStack {
                     Spacer()
-                    Button(action:{}) {
+                    Button(action:{
+                        self.isPresented.value = false
+                        
+                    }) {
                             Text("Save")
                     }
                     Spacer()
@@ -64,7 +66,7 @@ struct MovieDetail: View {
 #if DEBUG
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MovieDetail()
+        MovieDetail(movie:Movie())
     }
 }
 #endif

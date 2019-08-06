@@ -13,6 +13,8 @@
 		0B08E85B22E600C200F44B28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B08E85A22E600C200F44B28 /* Assets.xcassets */; };
 		0B08E85E22E600C200F44B28 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B08E85D22E600C200F44B28 /* Preview Assets.xcassets */; };
 		0B08E86122E600C200F44B28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B08E85F22E600C200F44B28 /* LaunchScreen.storyboard */; };
+		0B67DD0122F9CB4500EA620E /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B67DD0022F9CB4500EA620E /* Movie.swift */; };
+		0B67DD0322F9CB9900EA620E /* MovieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B67DD0222F9CB9900EA620E /* MovieList.swift */; };
 		0BACE39022F485470042E669 /* MovieTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0BACE38E22F485470042E669 /* MovieTracker.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,8 @@
 		0B08E85D22E600C200F44B28 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0B08E86022E600C200F44B28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B08E86222E600C200F44B28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B67DD0022F9CB4500EA620E /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		0B67DD0222F9CB9900EA620E /* MovieList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieList.swift; sourceTree = "<group>"; };
 		0BACE38F22F485470042E669 /* MovieTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MovieTracker.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +65,8 @@
 				0B08E85422E600BE00F44B28 /* AppDelegate.swift */,
 				0B08E85622E600BE00F44B28 /* SceneDelegate.swift */,
 				0B08E85822E600BE00F44B28 /* MovieDetail.swift */,
+				0B67DD0222F9CB9900EA620E /* MovieList.swift */,
+				0B67DD0022F9CB4500EA620E /* Movie.swift */,
 				0B08E85A22E600C200F44B28 /* Assets.xcassets */,
 				0B08E85F22E600C200F44B28 /* LaunchScreen.storyboard */,
 				0B08E86222E600C200F44B28 /* Info.plist */,
@@ -149,10 +155,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B67DD0322F9CB9900EA620E /* MovieList.swift in Sources */,
 				0B08E85522E600BE00F44B28 /* AppDelegate.swift in Sources */,
 				0BACE39022F485470042E669 /* MovieTracker.xcdatamodeld in Sources */,
 				0B08E85722E600BE00F44B28 /* SceneDelegate.swift in Sources */,
 				0B08E85922E600BE00F44B28 /* MovieDetail.swift in Sources */,
+				0B67DD0122F9CB4500EA620E /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
